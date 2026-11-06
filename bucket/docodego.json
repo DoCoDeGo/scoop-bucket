@@ -1,0 +1,30 @@
+{
+  "version": "0.7.1",
+  "homepage": "https://github.com/DoCoDeGo/docodego-alpha",
+  "description": "The intent-and-evidence layer for the agent age. Plants and operates an append-only record layer your agents must keep true.",
+  "license": "MIT",
+  "architecture": {
+    "64bit": {
+      "url": "https://github.com/DoCoDeGo/docodego-alpha/releases/download/v0.7.1/docodego-windows-x64.exe",
+      "hash": "f75809362a60579ee970b7baa2d70b7020643767d4617f6cf7bbbf739bd1b35d"
+    }
+  },
+  "bin": [
+    [
+      "docodego-windows-x64.exe",
+      "docodego"
+    ]
+  ],
+  "checkver": "github",
+  "autoupdate": {
+    "architecture": {
+      "64bit": {
+        "url": "https://github.com/DoCoDeGo/docodego-alpha/releases/download/v$version/docodego-windows-x64.exe",
+        "hash": {
+          "url": "https://github.com/DoCoDeGo/docodego-alpha/releases/download/v$version/sha256sums.txt",
+          "regex": "([a-fA-F0-9]{64})\\s+docodego-windows-x64\\.exe"
+        }
+      }
+    }
+  }
+}
